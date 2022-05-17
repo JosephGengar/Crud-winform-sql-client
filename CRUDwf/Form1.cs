@@ -75,5 +75,26 @@ namespace CRUDwf
                 Actualizar();
             }
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            int? id = GetId();
+            try
+            {
+                if (id != null)
+                {
+                    Personas oPersonas = new Personas();
+                    oPersonas.Borrar((int)id);
+                    Actualizar();
+                    MessageBox.Show("Persona Eliminada");
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("ocurrio un error al eliminar" + ex.Message);;
+            }
+           
+        }
     }
 }

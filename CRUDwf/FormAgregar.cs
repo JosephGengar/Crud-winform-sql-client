@@ -37,8 +37,16 @@ namespace CRUDwf
             Personas oPersonas = new Personas();
             try
             {
-                oPersonas.Agregar(txtNombre.Text, txtApellido.Text);
-                MessageBox.Show("Persona Agregada con exito!");
+                if (id == null)
+                {
+                    oPersonas.Agregar(txtNombre.Text, txtApellido.Text);
+                    MessageBox.Show("Persona Agregada con exito!");
+                }
+                else
+                {
+                    oPersonas.Editar(txtNombre.Text, txtApellido.Text, (int)id);
+                    MessageBox.Show("Persona Modificada con exito!!");
+                }
                 this.Close();
             }
             catch (Exception ex)

@@ -136,6 +136,27 @@ namespace CRUDwf
             }
         }
 
+        public void Borrar(int id)
+        {
+            // a traves de @ evitamos la sql inyeccion mediante alias
+            string query = "delete from tContacto" + " where ID=@id ";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@id", id);
+                try
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    connection.Close();
+
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Error" + ex.Message);
+                }
+            }
+        }
     }
     public class PersonasModel
     {
