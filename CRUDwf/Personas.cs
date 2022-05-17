@@ -54,6 +54,30 @@ namespace CRUDwf
             }
             return personasGet;
         }
+
+        public void Agregar(string FirstName, string LastName)
+        {
+            // a traves de @ evitamos la sql inyeccion mediante alias
+            string query = "insert into tContacto(nombre, apellido) values" + "(@FirstName, @LastName)";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@FirstName", FirstName);
+                command.Parameters.AddWithValue("@LastName", LastName);
+                try
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                  
+                }
+                catch (Exception ex)
+                {
+
+                    throw new Exception("Error" + ex.Message);
+                }
+            }         
+        }
         
     }
     public class PersonasModel

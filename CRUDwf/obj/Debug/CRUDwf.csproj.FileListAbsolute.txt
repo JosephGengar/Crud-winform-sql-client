@@ -8,3 +8,4 @@ C:\Users\José\Desktop\Proyectos\crudwinf\CRUDwf\CRUDwf\bin\Debug\CRUDwf.exe
 C:\Users\José\Desktop\Proyectos\crudwinf\CRUDwf\CRUDwf\bin\Debug\CRUDwf.pdb
 C:\Users\José\Desktop\Proyectos\crudwinf\CRUDwf\CRUDwf\obj\Debug\CRUDwf.exe
 C:\Users\José\Desktop\Proyectos\crudwinf\CRUDwf\CRUDwf\obj\Debug\CRUDwf.pdb
+C:\Users\José\Desktop\Proyectos\crudwinf\CRUDwf\CRUDwf\obj\Debug\CRUDwf.FormAgregar.resources

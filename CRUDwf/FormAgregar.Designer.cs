@@ -75,6 +75,7 @@
             this.btnGuardar.TabIndex = 4;
             this.btnGuardar.Text = "Guardar Persona";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // FormAgregar
             // 
@@ -87,6 +88,7 @@
             this.Controls.Add(this.lblApelllido);
             this.Controls.Add(this.lblNombre);
             this.Name = "FormAgregar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAgregar";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -41,5 +41,12 @@ namespace CRUDwf
             Personas oPersonas = new Personas();
             dataGridView1.DataSource = oPersonas.Obtener();
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            FormAgregar frm = new FormAgregar();
+            frm.ShowDialog(); // showdialog igual q angular, se tiene q cerrar este para seguir con el otro
+            Actualizar();
+        }
     }
 }
