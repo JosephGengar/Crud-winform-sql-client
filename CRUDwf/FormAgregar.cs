@@ -12,9 +12,24 @@ namespace CRUDwf
 {
     public partial class FormAgregar : Form
     {
-        public FormAgregar()
+        private int? id;
+        public FormAgregar(int? Id = null)
         {
+            this.id = Id;
             InitializeComponent();
+            if (this.id != null)
+            {
+                CargarDatos();
+            }
+        }
+        private void CargarDatos()
+        {
+            //devuelve los datos del modelo seguir el id al dialog
+            Personas oPersonas = new Personas();
+            PersonasModel oPerM = oPersonas.Obtener((int)id);
+            txtNombre.Text = oPerM.Nombre;
+            txtApellido.Text = oPerM.Apellido;
+
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -31,6 +46,11 @@ namespace CRUDwf
 
                 MessageBox.Show("Ocurrio un Error!!" + ex.Message);;
             }
+        }
+
+        private void FormAgregar_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

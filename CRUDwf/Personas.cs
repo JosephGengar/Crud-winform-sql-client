@@ -55,6 +55,39 @@ namespace CRUDwf
             return personasGet;
         }
 
+        //necesito una lista que devuelva un elemento para meter
+        //informacion al dialog asi q copia el metodo obtener:
+
+        public PersonasModel Obtener(int id)
+        {
+            string query = "select ID, nombre, apellido from tContacto" + " where ID=@id";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@id", id);
+                try
+                {
+                    connection.Open();
+                    SqlDataReader reader = command.ExecuteReader();
+                    reader.Read();                  
+                        PersonasModel oPersonasM = new PersonasModel();
+                        oPersonasM.Id = reader.GetInt32(0);
+                        oPersonasM.Nombre = reader.GetString(1);
+                        oPersonasM.Apellido = reader.GetString(2);                                     
+                    reader.Close();
+                    connection.Close();
+                    return oPersonasM;
+                }
+                catch (Exception ex)
+                {
+
+                    throw new Exception("Error" + ex.Message);
+                }
+            }
+
+        }
+
+
         public void Agregar(string FirstName, string LastName)
         {
             // a traves de @ evitamos la sql inyeccion mediante alias
@@ -78,15 +111,16 @@ namespace CRUDwf
                 }
             }         
         }
-        public void ActualizarDB(string FirstName, string LastName, int id)
+        public void Editar(string FirstName, string LastName, int id)
         {
             // a traves de @ evitamos la sql inyeccion mediante alias
-            string query = "update tContacto set nombre=@FirstName, apellido=@LastName + "(@FirstName, @LastName)";
+            string query = "update tContacto set nombre=@FirstName, apellido=@LastName" + " where ID=@id " ;
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@FirstName", FirstName);
                 command.Parameters.AddWithValue("@LastName", LastName);
+                command.Parameters.AddWithValue("@id", id);
                 try
                 {
                     connection.Open();

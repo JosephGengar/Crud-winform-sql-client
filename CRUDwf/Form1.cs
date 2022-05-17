@@ -14,6 +14,7 @@ namespace CRUDwf
     {
         public Form1()
         {
+            //al form cambiarle la propiedad selection mode =a full row selected
             InitializeComponent();
         }
 
@@ -47,6 +48,32 @@ namespace CRUDwf
             FormAgregar frm = new FormAgregar();
             frm.ShowDialog(); // showdialog igual q angular, se tiene q cerrar este para seguir con el otro
             Actualizar();
+        }
+
+        private int? GetId()
+        {
+            try
+            {
+                return int.Parse(dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[0].Value.ToString());
+
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            int? id = GetId();
+            if (id != null)
+            {
+                //utilizando la sobrecarga de constructor q hicimos
+                FormAgregar frmEditar = new FormAgregar(id);
+                frmEditar.ShowDialog();
+                Actualizar();
+            }
         }
     }
 }

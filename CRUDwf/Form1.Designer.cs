@@ -31,6 +31,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnConexion = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,14 +42,15 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(698, 359);
             this.dataGridView1.TabIndex = 0;
             // 
             // btnConexion
             // 
-            this.btnConexion.Location = new System.Drawing.Point(524, 25);
+            this.btnConexion.Location = new System.Drawing.Point(543, 25);
             this.btnConexion.Name = "btnConexion";
-            this.btnConexion.Size = new System.Drawing.Size(186, 34);
+            this.btnConexion.Size = new System.Drawing.Size(167, 34);
             this.btnConexion.TabIndex = 1;
             this.btnConexion.Text = "Probar Conexion";
             this.btnConexion.UseVisualStyleBackColor = true;
@@ -64,11 +66,22 @@
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(187, 28);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(149, 31);
+            this.btnEditar.TabIndex = 3;
+            this.btnEditar.Text = "Editar Persona";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnConexion);
             this.Controls.Add(this.dataGridView1);
@@ -85,6 +98,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnConexion;
         private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btnEditar;
     }
 }
 
