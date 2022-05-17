@@ -78,7 +78,30 @@ namespace CRUDwf
                 }
             }         
         }
-        
+        public void ActualizarDB(string FirstName, string LastName, int id)
+        {
+            // a traves de @ evitamos la sql inyeccion mediante alias
+            string query = "update tContacto set nombre=@FirstName, apellido=@LastName + "(@FirstName, @LastName)";
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@FirstName", FirstName);
+                command.Parameters.AddWithValue("@LastName", LastName);
+                try
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    connection.Close();
+
+                }
+                catch (Exception ex)
+                {
+
+                    throw new Exception("Error" + ex.Message);
+                }
+            }
+        }
+
     }
     public class PersonasModel
     {
