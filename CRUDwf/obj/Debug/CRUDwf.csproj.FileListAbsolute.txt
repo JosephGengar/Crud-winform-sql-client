@@ -1,5 +1,4 @@
 C:\Users\José\Desktop\Proyectos\crudwinf\CRUDwf\CRUDwf\obj\Debug\CRUDwf.csprojAssemblyReference.cache
-C:\Users\José\Desktop\Proyectos\crudwinf\CRUDwf\CRUDwf\obj\Debug\CRUDwf.Form1.resources
 C:\Users\José\Desktop\Proyectos\crudwinf\CRUDwf\CRUDwf\obj\Debug\CRUDwf.Properties.Resources.resources
 C:\Users\José\Desktop\Proyectos\crudwinf\CRUDwf\CRUDwf\obj\Debug\CRUDwf.csproj.GenerateResource.cache
 C:\Users\José\Desktop\Proyectos\crudwinf\CRUDwf\CRUDwf\obj\Debug\CRUDwf.csproj.CoreCompileInputs.cache
@@ -9,3 +8,4 @@ C:\Users\José\Desktop\Proyectos\crudwinf\CRUDwf\CRUDwf\bin\Debug\CRUDwf.pdb
 C:\Users\José\Desktop\Proyectos\crudwinf\CRUDwf\CRUDwf\obj\Debug\CRUDwf.exe
 C:\Users\José\Desktop\Proyectos\crudwinf\CRUDwf\CRUDwf\obj\Debug\CRUDwf.pdb
 C:\Users\José\Desktop\Proyectos\crudwinf\CRUDwf\CRUDwf\obj\Debug\CRUDwf.FormAgregar.resources
+C:\Users\José\Desktop\Proyectos\crudwinf\CRUDwf\CRUDwf\obj\Debug\CRUDwf.CRUD.resources

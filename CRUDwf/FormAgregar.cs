@@ -20,6 +20,7 @@ namespace CRUDwf
             if (this.id != null)
             {
                 CargarDatos();
+                this.Text = "Editar";
             }
         }
         private void CargarDatos()

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CRUDwf
 {
-    public partial class Form1 : Form
+    public partial class CRUD : Form
     {
-        public Form1()
+        public CRUD()
         {
             //al form cambiarle la propiedad selection mode =a full row selected
             InitializeComponent();

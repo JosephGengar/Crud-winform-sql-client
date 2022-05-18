@@ -1,6 +1,6 @@
 ﻿namespace CRUDwf
 {
-    partial class Form1
+    partial class CRUD
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -33,6 +33,7 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,12 +45,12 @@
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(698, 359);
+            this.dataGridView1.Size = new System.Drawing.Size(727, 334);
             this.dataGridView1.TabIndex = 0;
             // 
             // btnConexion
             // 
-            this.btnConexion.Location = new System.Drawing.Point(543, 25);
+            this.btnConexion.Location = new System.Drawing.Point(572, 25);
             this.btnConexion.Name = "btnConexion";
             this.btnConexion.Size = new System.Drawing.Size(167, 34);
             this.btnConexion.TabIndex = 1;
@@ -71,7 +72,7 @@
             // 
             this.btnEditar.Location = new System.Drawing.Point(187, 28);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(149, 31);
+            this.btnEditar.Size = new System.Drawing.Size(163, 31);
             this.btnEditar.TabIndex = 3;
             this.btnEditar.Text = "Editar Persona";
             this.btnEditar.UseVisualStyleBackColor = true;
@@ -79,29 +80,42 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(357, 28);
+            this.btnEliminar.Location = new System.Drawing.Point(369, 27);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(144, 31);
+            this.btnEliminar.Size = new System.Drawing.Size(158, 31);
             this.btnEliminar.TabIndex = 4;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // Form1
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 439);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(736, 17);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "* Probar Conexion ademas de verificar que funcione el enlace con la base de datos" +
+    ", tambien actualiza los registros.";
+            // 
+            // CRUD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.SystemColors.Info;
+            this.ClientSize = new System.Drawing.Size(822, 465);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnConexion);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "CRUD";
+            this.Text = "CRUD winforms";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -112,6 +126,7 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Label label1;
     }
 }
 
